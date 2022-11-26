@@ -11,6 +11,9 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
+plugins {
+    id 'maven-publish'
+}
 
 version = VERSION_NAME
 group = GROUP
@@ -34,14 +37,4 @@ android {
 }
 
 dependencies {
-}
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
-    repositories {
-        mavenLocal()
-    }
 }
